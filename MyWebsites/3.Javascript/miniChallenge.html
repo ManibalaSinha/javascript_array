@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html"; charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        #circle{
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+<input id="myInput" type="text" value="test" />
+<button id="stylesChanger">Change the text</button>
+<div id="firstDiv">This is some text</div>
+<div id="circle"></div>
+<script type="text/javascript">
+    var newText=document.getElementById("myInput").value;
+
+
+    var divId="firstDiv";
+    document.getElementById("stylesChanger").onclick=function(){
+        newText=document.getElementById("myInput").value;
+        document.getElementById(divId).innerHTML=newText;
+    }
+    document.getElementById("circle").onclick=function(){
+        document.getElementById("circle").style.display="none";
+    }
+</script>
+</body>
+</html>
